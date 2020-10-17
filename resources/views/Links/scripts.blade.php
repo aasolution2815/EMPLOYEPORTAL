@@ -1,2 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.js"></script>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
+<script type="text/javascript" src="{{asset('/public/assets/js/jquery.min.js') }}"></script>
+<script src="{{asset('/public/assets/js/parsley.js') }}"></script>
