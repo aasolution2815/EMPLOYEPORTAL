@@ -36,11 +36,7 @@ class AuthenticationController extends Controller
      */
     public function CheckLogin(Request $request)
     {
-        $model = new EmsModel();
-        $user_name = $request->username;
-        $user_Password = $request->userPassword;
-        $response = $model->Authtentication($user_name,$user_Password);
-        return $response;
+
     }
 
     /**
