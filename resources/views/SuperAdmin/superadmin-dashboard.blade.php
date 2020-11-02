@@ -9,7 +9,7 @@
     <div class="nav_patch-overlay-box"></div>
     <div class="nav_patch-container navbar-wrapper">
         <!-- [ Header ] start -->
-        <nav class="navbar header-navbar nav_patch-header">
+        <nav class="navbar header-navbar nav_patch-header backcolor">
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
                     <a href="index-2.html">
@@ -94,19 +94,19 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="email-inbox.html">
+                                        <a href="#">
                                             <i class="feather icon-mail"></i> My Messages
 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="auth-lock-screen.html">
+                                        <a href="#">
                                             <i class="feather icon-lock"></i> Lock Screen
 
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="auth-sign-in-social.html">
+                                        <a href="#">
                                             <i class="feather icon-log-out"></i> Logout
 
                                         </a>

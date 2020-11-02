@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{csrf_token()}}">
+    <link rel="stylesheet" href="{{asset('/public/assets/css/tailwind.min.css')}}">
     <title>EMS-Employee Mangement System</title>
     @include('Links.links')
 
@@ -19,7 +20,7 @@
         <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
                   flex items-center justify-center">
 
-            <div class="w-full h-100">
+            <div class="w-full h-100" style="padding-top: 100px;">
 
                 <!-- <h1 class="text-xl font-bold">Abstract UI</h1> -->
 
@@ -30,7 +31,7 @@
                         <label class="block text-gray-700">Email Address</label>
                         <input type="email" name="" id="" placeholder="Enter Email Address" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required="" data-parsley-trigger="blur"
                         data-parsley-errors-container=".usernameerror">
-                        <span class="usernameerror"></span>
+                        <span class="usernameerror red_error"></span>
                     </div>
 
                     <div class="mt-4">
@@ -38,7 +39,7 @@
                         <input type="password" name="" id="" placeholder="Enter Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                           focus:bg-white focus:outline-none" required="" data-parsley-trigger="blur"
                           data-parsley-errors-container=".user_password">
-                          <span class="user_password"></span>
+                          <span class="user_password red_error"></span>
                     </div>
 
                     <div class="text-right mt-2">

@@ -10,8 +10,8 @@
 
 </head>
 <body>
-    {{-- @include('Navbar.navbar') --}}
-    @yield('content')
+    @include('Navbar.navbar')
+
 
 </body>
 @include('Links.scripts')

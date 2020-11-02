@@ -17,7 +17,8 @@ class SuperAdminController extends Controller
      */
     public function showDashboard()
     {
-        return view('SuperAdmin.superadmin-dashboard');
+        return view('SuperAdmin.inputs');
+        // return view('SuperAdmin.superadmin-dashboard');
     }
 
     /**
@@ -39,7 +40,6 @@ class SuperAdminController extends Controller
      */
     public function saveClientCreation(Request $request)
     {
-
     }
 
     /**

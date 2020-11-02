@@ -31,6 +31,8 @@ Route::get('SuperAdmin/dashboard', 'SuperAdmin\SuperAdminController@showDashboar
 //Superadmin Client Creation  Url
 Route::get('SuperAdmin/client-creation', 'SuperAdmin\SuperAdminController@showClientCreation')->name('SuperAdmin/client-creation');
 
+
+
 /** Super Admin Url End Here */
 
 

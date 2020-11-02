@@ -2924,3 +2924,16 @@ table thead .border-bottom-info th {
 .height-200 {
     height: 200px;
 }
+.backcolor{
+    background-color:  var(--first_color);
+}
+.centered{
+    text-align: center;
+}
+.h1_weight_700 {
+    font-weight: 700;
+}
+.red_error{
+    color: #ad0000;
+    margin-top: 5px;
+}
