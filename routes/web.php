@@ -32,7 +32,7 @@ Route::get('SuperAdmin/dashboard', 'SuperAdmin\SuperAdminController@showDashboar
 Route::get('SuperAdmin/client-creation', 'SuperAdmin\SuperAdminController@showClientCreation')->name('SuperAdmin/client-creation');
 
 
-
+Route::get('SuperAdmin/inputs', 'SuperAdmin\SuperAdminController@inputs')->name('SuperAdmin/inputs');
 /** Super Admin Url End Here */
 
 
