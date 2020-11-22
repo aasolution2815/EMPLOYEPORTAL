@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('/public/assets/css/style.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('/public/assets/css/font-awesome-n.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('/public/assets/css/select2.css')}}">
-
+<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
 <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" /> -->
 
 

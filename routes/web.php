@@ -36,3 +36,7 @@ Route::get('SuperAdmin/inputs', 'SuperAdmin\SuperAdminController@inputs')->name(
 /** Super Admin Url End Here */
 
 
+Route::get('students/list', 'StudentController@getStudents')->name('students.list');
+// Route::get('students/list', [StudentController::class, 'getStudents'])->name('students.list');
+
+

@@ -283,7 +283,21 @@
         <div>
             <div class="row ">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
-
+                    <table class="table table-bordered yajra-datatable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Username</th>
+                                <th>Phone</th>
+                                <th>DOB</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -319,7 +333,25 @@
         // ------------ Multiple File upload END ------------
 
 
-
+        var table = $('.yajra-datatable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('students.list') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {data: 'username', name: 'username'},
+            {data: 'phone', name: 'phone'},
+            {data: 'dob', name: 'dob'},
+            {
+                data: 'action',
+                name: 'action',
+                orderable: true,
+                searchable: true
+            },
+        ]
+    });
 
     });
 
