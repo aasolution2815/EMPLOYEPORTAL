@@ -12,7 +12,7 @@
                     <div>
                         <label for="name" class="input_label_light">First Name</label>
                         <div class="inputWithIcon">
-                            <input type="text" id="name" class="input_text" placeholder="Your name">
+                            <input type="text" id="name" class="input_text margin_top_0" placeholder="Your name">
                             <i class="feather icon-user inside_input_icon"></i>
                             <span class="error_input_patch">
                                 <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
@@ -25,7 +25,7 @@
                     <div>
                         <label for="name" class="input_label_light">First Name</label>
                         <div class="inputWithIcon">
-                            <input type="text" id="name" class="input_text" placeholder="Your name">
+                            <input type="text" id="name" class="input_text margin_top_0" placeholder="Your name">
                             <i class="feather icon-user inside_input_icon"></i>
                             <span class="error_input_patch">
                                 <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
@@ -40,7 +40,7 @@
                     <div>
                         <label for="name" class="input_label_light">Date Picker</label>
                         <div class="inputWithIcon">
-                            <input type="date" id="name" class="input_text" placeholder="Your name">
+                            <input type="date" id="name" class="input_text margin_top_0" placeholder="Your name">
                             <i class="feather icon-user inside_input_icon"></i>
                             <span class="error_input_patch">
                                 <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
@@ -159,7 +159,7 @@
                     <div>
                         <label for="name" class="input_label_light">Number Input</label>
                         <div class="inputWithIcon">
-                            <input type="number" id="name" class="input_text" placeholder="Contact No">
+                            <input type="number" id="name" class="input_text margin_top_0" placeholder="Contact No">
                             <i class="feather icon-user inside_input_icon"></i>
                             <span class="error_input_patch">
                                 <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
@@ -172,7 +172,7 @@
                     <div>
                         <label for="name" class="input_label_light">Passowrd Input</label>
                         <div class="inputWithIcon">
-                            <input type="password" id="password-field" class="input_text" placeholder="Password">
+                            <input type="password" id="password-field" class="input_text margin_top_0" placeholder="Password">
                             <i class="feather icon-user inside_input_icon"></i>
                             <span class="error_input_patch">
                                 <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
@@ -262,8 +262,9 @@
         <div>
             <div class="row ">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
-                    <button class="primary_btnn btnn">Submit</button>
+                    
                     <button class="cancel_btnn btnn">Cancel</button>
+                    <button class="primary_btnn btnn">Submit</button>
                     <button class="cancel_btnn btnn">Send Back</button>
                     <button class="not_approve btnn">Not Approve</button>
                 </div>
@@ -283,7 +284,7 @@
         <div>
             <div class="row ">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
-                    <table class="table table-bordered yajra-datatable">
+                    <table class="table yajra-datatable">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -334,6 +335,15 @@
 
 
         var table = $('.yajra-datatable').DataTable({
+            language: {
+                searchPlaceholder: '',
+                search: '<i class="feather icon-search">',
+                info: "Displaying _START_ to _END_ from _TOTAL_ ",
+                paginate: {
+                    next: '<i class="feather icon-chevron-right mid_icon">',
+                    previous: '<i class="feather icon-chevron-left mid_icon">'
+                }
+            },
         processing: true,
         serverSide: true,
         ajax: "{{ route('students.list') }}",

@@ -50,8 +50,19 @@ class SuperAdminController extends Controller
      */
     public function inputs()
     {
-        return view('Layout.inputs');
+        return view('SuperAdmin.inputs');
     }
+
+    public function add_client()
+    {
+        return view('SuperAdmin.add_client');
+    }
+
+    public function show_table()
+    {
+        return view('SuperAdmin.show_table');
+    }
+    
 
     /**
      * Show the form for editing the specified resource.

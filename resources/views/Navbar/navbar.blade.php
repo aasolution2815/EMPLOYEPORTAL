@@ -28,17 +28,14 @@
                                     <i class="feather icon-bell"></i>
                                     <span class="badge bg-c-red">5</span>
                                 </div>
-                                <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn"
-                                    data-dropdown-out="fadeOut">
+                                <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                     <li>
                                         <h6>Notifications</h6>
                                         <label class="label label-danger">New</label>
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="img-radius"
-                                                src="{{asset('/public/assets/images/Avatar/user-4.png') }}"
-                                                alt="Generic placeholder image">
+                                            <img class="img-radius" src="{{asset('/public/assets/images/Avatar/user-4.png') }}" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">John Doe</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
@@ -50,9 +47,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="img-radius"
-                                                src="{{asset('/public/assets/images/Avatar/user-3.png') }}"
-                                                alt="Generic placeholder image">
+                                            <img class="img-radius" src="{{asset('/public/assets/images/Avatar/user-3.png') }}" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">Joseph William</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
@@ -64,9 +59,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="img-radius"
-                                                src="{{asset('/public/assets/images/Avatar/user-4.png') }}"
-                                                alt="Generic placeholder image">
+                                            <img class="img-radius" src="{{asset('/public/assets/images/Avatar/user-4.png') }}" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">Sara Soudein</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
@@ -83,13 +76,11 @@
 
                             <div class="dropdown-primary dropdown">
                                 <div class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="{{asset('/public/assets/images/Avatar/user-4.png') }}" class="img-radius"
-                                        alt="User-Profile-Image">
+                                    <img src="{{asset('/public/assets/images/Avatar/user-4.png') }}" class="img-radius" alt="User-Profile-Image">
                                     <span>Abhishek Jaiswar</span>
                                     <i class="feather icon-chevron-down"></i>
                                 </div>
-                                <ul class="show-notification profile-notification dropdown-menu"
-                                    data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                                     <li>
                                         <a href="#!">
                                             <i class="feather icon-settings"></i> Settings
@@ -135,6 +126,38 @@
                         <div class="nav_patch-inner-navbar main-menu">
                             <div class="nav_patch-navigation-label">Section 1</div>
                             <ul class="nav_patch-item nav_patch-left-item">
+                            <li class="nav_patch-hasmenu">
+                                    <a href="javascript:void(0)" class="waves-effect waves-dark">
+                                        <span class="nav_patch-micon">
+                                            <i class="feather icon-layers"></i>
+                                        </span>
+                                        <span class="nav_patch-mtext">Client</span>
+                                    </a>
+                                    <ul class="nav_patch-submenu">
+                                        <li class="">
+                                            <a href="{{url('/SuperAdmin/add_client')}}" class="waves-effect waves-dark">
+                                                <span class="nav_patch-mtext">
+                                                    Add Client
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="{{url('/SuperAdmin/show_table')}}" class="waves-effect waves-dark">
+                                                <span class="nav_patch-mtext">
+                                                    Show Client
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="{{url('/SuperAdmin/inputs')}}" class="waves-effect waves-dark">
+                                                <span class="nav_patch-mtext">
+                                                    Inputs
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
                                 <li class="nav_patch-hasmenu">
                                     <a href="javascript:void(0)" class="waves-effect waves-dark">
                                         <span class="nav_patch-micon"><i class="feather icon-sidebar"></i></span>
@@ -311,6 +334,7 @@
                                         </li>
 
                                     </ul>
+                                </li>
                                 <li class="">
                                     <a href="javascript:void(0)" class="disabled waves-effect waves-dark">
                                         <span class="nav_patch-micon">
