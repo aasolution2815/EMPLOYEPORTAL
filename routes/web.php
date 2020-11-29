@@ -35,6 +35,8 @@ Route::get('SuperAdmin/client-creation', 'SuperAdmin\SuperAdminController@showCl
 Route::get('SuperAdmin/inputs', 'SuperAdmin\SuperAdminController@inputs')->name('SuperAdmin/inputs');
 
 Route::get('SuperAdmin/add_client', 'SuperAdmin\SuperAdminController@add_client')->name('SuperAdmin/add_client');
+
+Route::get('SuperAdmin/module_assign', 'SuperAdmin\SuperAdminController@module_assign')->name('SuperAdmin/module_assign');
 /** Super Admin Url End Here */
 
 Route::get('SuperAdmin/show_table', 'SuperAdmin\SuperAdminController@show_table')->name('SuperAdmin/show_table');

@@ -57,6 +57,10 @@ class SuperAdminController extends Controller
     {
         return view('SuperAdmin.add_client');
     }
+    public function module_assign()
+    {
+        return view('SuperAdmin.module_assign');
+    }
 
     public function show_table()
     {

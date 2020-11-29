@@ -4847,4 +4847,11 @@ table.dataTable thead .sorting_asc {
     padding: 5px 10px !important;
     display: block;
 }
+.font-size_16{
+    font-size: 16px;
+}
+
+.font_size_20{
+    font-size: 20px;
+}
 /* /////////////////////////////////////// */
