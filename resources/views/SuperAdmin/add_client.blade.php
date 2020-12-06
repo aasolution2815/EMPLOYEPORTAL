@@ -1,5 +1,6 @@
 @extends('Layout.app')
 @section('content')
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <style></style>
 <div>
     <div class="h1_weight_700 shadow_patch">
@@ -17,7 +18,21 @@
         <div id="form_patch">
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
-                    <div>
+                    <div class="container">
+                        <div class="avatar-upload">
+                            <div class="avatar-edit">
+                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                <label for="imageUpload"></label>
+                            </div>
+                            <div class="avatar-preview">
+                                <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
+                    <div style="margin-top: 30px;">
                         <label for="name" class="label_patch">Company Name</label>
                         <div class="inputWithIcon">
                             <input type="text" id="name" class="input_text margin_top_0" placeholder="Company Name">
@@ -29,7 +44,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
-                    <div>
+                    <div style="margin-top: 30px;">
                         <label for="name" class="label_patch">Admin Name</label>
                         <div class="inputWithIcon">
                             <input type="text" id="name" class="input_text margin_top_0" placeholder="Admin Name">
@@ -120,7 +135,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
+                <div class="col-md-3 col-sm-6 col-xs-12 margin_bottom_10">
                     <div>
                         <label for="name" class="label_patch">No. of Days</label>
                         <div class="inputWithIcon">
@@ -132,7 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
+                <div class="col-md-3 col-sm-6 col-xs-12 margin_bottom_10">
                     <div>
                         <label for="name" class="label_patch">End Date</label>
                         <div class="inputWithIcon">
@@ -144,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
+                <div class="col-md-3 col-sm-6 col-xs-12 margin_bottom_10">
                     <div>
                         <label for="name" class="label_patch">Website</label>
                         <div class="inputWithIcon">
@@ -156,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 margin_bottom_10">
+                <div class="col-md-3 col-sm-6 col-xs-12 margin_bottom_10">
                     <div>
                         <label for="name" class="label_patch">Prefix</label>
                         <div class="inputWithIcon">
@@ -340,5 +355,23 @@
             $textContainer.text(filesCount + ' files selected');
         }
     });
+
+
+    ///////////     image upload js with preview  //////////////////////
+
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#imageUpload").change(function() {
+    readURL(this);
+});
 </script>
 @endsection

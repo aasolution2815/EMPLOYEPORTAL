@@ -28,11 +28,11 @@
                                     <i class="feather icon-bell"></i>
                                     <span class="badge bg-c-red">5</span>
                                 </div>
-                                <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut" style="overflow: auto;height: 300px;">
                                     <li>
                                         <h6>Notifications</h6>
                                         <label class="label label-danger">New</label>
-                                    </li>
+                                    </li>   
                                     <li>
                                         <div class="media">
                                             <img class="img-radius" src="{{asset('/public/assets/images/Avatar/user-4.png') }}" alt="Generic placeholder image">

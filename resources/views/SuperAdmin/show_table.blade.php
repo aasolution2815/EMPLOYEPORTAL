@@ -96,7 +96,7 @@
         <div>
             <div class="row ">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding_15">
-                    <table class="table yajra-datatable">
+                    <table class="table yajra-datatable width_100">
                         <thead>
                             <tr>
                                 <th></th>
