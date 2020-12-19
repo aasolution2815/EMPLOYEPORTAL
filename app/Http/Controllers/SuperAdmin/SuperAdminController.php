@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use App\Model\EmsModel;
 use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\DB;
 class SuperAdminController extends Controller
 {
     /**
@@ -28,7 +28,13 @@ class SuperAdminController extends Controller
      */
     public function showClientCreation()
     {
-        return view('SuperAdmin.client-creation');
+        $getallDeualtImage = DB::table('mst_tbl_all_defualtimages')->where(['FLAG' => 'Show'])->get();
+        if (count($getallDeualtImage) > 0 ) {
+            $images = $getallDeualtImage[0]->COMPNAYLOGO;
+        } else {
+            $images = '';
+        }
+        return view('SuperAdmin.client-creation' , compact('images') );
     }
 
     /**
@@ -55,7 +61,13 @@ class SuperAdminController extends Controller
 
     public function add_client()
     {
-        return view('SuperAdmin.add_client');
+         $getallDeualtImage = DB::table('mst_tbl_all_defualtimages')->where(['FLAG' => 'Show'])->get();
+        if (count($getallDeualtImage) > 0 ) {
+            $images = $getallDeualtImage[0]->COMPNAYLOGO;
+        } else {
+            $images = '';
+        }
+        return view('SuperAdmin.add_client', compact('images'));
     }
     public function module_assign()
     {
@@ -66,7 +78,7 @@ class SuperAdminController extends Controller
     {
         return view('SuperAdmin.show_table');
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.
