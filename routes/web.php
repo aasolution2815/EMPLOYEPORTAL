@@ -41,6 +41,7 @@ Route::get('SuperAdmin/module_assign', 'SuperAdmin\SuperAdminController@module_a
 
 Route::get('SuperAdmin/show_table', 'SuperAdmin\SuperAdminController@show_table')->name('SuperAdmin/show_table');
 
+Route::get('SuperAdmin/module_creation', 'SuperAdmin\SuperAdminController@module_creation')->name('SuperAdmin/module_creation');
 
 Route::get('students/list', 'StudentController@getStudents')->name('students.list');
 // Route::get('students/list', [StudentController::class, 'getStudents'])->name('students.list');

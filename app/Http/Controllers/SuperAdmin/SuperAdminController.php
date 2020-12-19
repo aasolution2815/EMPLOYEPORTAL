@@ -59,6 +59,12 @@ class SuperAdminController extends Controller
         return view('SuperAdmin.inputs');
     }
 
+    public function module_creation()
+    {
+        
+        return view('SuperAdmin.module_creation');
+    }
+
     public function add_client()
     {
          $getallDeualtImage = DB::table('mst_tbl_all_defualtimages')->where(['FLAG' => 'Show'])->get();
