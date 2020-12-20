@@ -58,7 +58,6 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
-                        <!-- <label for="name" class="input_label">Category</label> -->
                         <div>
                             <label for="name" class="dropdown_label_light">Select Category</label>
                             <div>
