@@ -5,42 +5,25 @@
 <div>
     <div class="h1_weight_700 shadow_patch">
         <div id="textbox" class="">
-            <p class="alignleft bold_heavy bold_font_heading" id="add_client">Add Module</p>
+            <p class="alignleft bold_heavy bold_font_heading" id="add_client">Modules</p>
             <p class="alignright margin-top_10">
                 <a href="javascript:history.back()"><span class="btn_with_icon" style="margin-right: 15px;"><i class="feather icon-corner-up-left  small_icon_left"></i>
                         Back </span></a>
-                <span class="btn_with_icon c1" style="margin-right: 15px;"><i class="feather icon-file-plus  small_icon_left"></i> Import </span>
-                <span class="btn_with_icon c2 hide" style="margin-right: 15px;"><i class="feather icon-plus-circle  small_icon_left"></i> Form </span>
+
 
             </p>
         </div>
         <div style="clear: both;"></div>
-        <form action="#" id="client_form">
+        <form action="#" id="module_form">
             <div id="form_patch">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
                         <label for="name" class="input_label"></label>
                         <div>
-                            <label for="name" class="input_label_light">Name</label>
+                            <label for="name" class="input_label_light">Module Name</label>
                             <div class="inputWithIcon">
-                                <input type="text" id="name" class="input_text margin_top_0" placeholder="Your name">
+                                <input type="text" class="input_text margin_top_0"  id="module_name" placeholder="Module name" required="" data-parsley-trigger="blur" data-parsley-required-message="Required">
                                 <i class="feather icon-user inside_input_icon"></i>
-                                <span class="error_input_patch">
-                                    <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
-                        <label for="name" class="input_label"></label>
-                        <div>
-                            <label for="name" class="input_label_light">Perciption</label>
-                            <div class="inputWithIcon">
-                                <input type="text" id="name" class="input_text margin_top_0" placeholder="Your name">
-                                <i class="feather icon-user inside_input_icon"></i>
-                                <span class="error_input_patch">
-                                    <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -49,11 +32,8 @@
                         <div>
                             <label for="name" class="input_label_light">URL</label>
                             <div class="inputWithIcon">
-                                <input type="text" id="name" class="input_text margin_top_0" placeholder="Your name">
+                                <input type="text" class="input_text margin_top_0" placeholder="Module Url" id="module_url" placeholder="Module URL" required="" data-parsley-trigger="blur" data-parsley-required-message="Required">
                                 <i class="feather icon-user inside_input_icon"></i>
-                                <span class="error_input_patch">
-                                    <i class="feather icon-x error_inputcolor"><label for="name" class="error_label">Name Taken</label></i>
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -61,37 +41,55 @@
                         <div>
                             <label for="name" class="dropdown_label_light">Select Category</label>
                             <div>
-                                <select class="js-example-basic-single" name="state">
-                                    <option value="AL">Alabama</option>
+                                <select class="js-example-basic-single" name="category_id" id="category_id" required="" data-parsley-trigger="blur" data-parsley-required-message="Required">
+                                    <option value="">Alabama</option>
                                     <option value="WY">Wyoming</option>
                                 </select>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
+                        <label for="name" class="input_label"></label>
+                        <div>
+                            <label for="name" class="input_label_light">Description</label>
+                            <div class="inputWithIcon">
+                                <textarea id="w3review" name="w3review" rows="4" cols="50" name="description" id="description">
+                                    </textarea>
+                                <i class="feather icon-user inside_input_icon"></i>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div id="textbox" class="">
                     <p class="alignright">
                         <button class="cancel_btnn btnn">Cancel</button>
-                        <button class="primary_btnn btnn" onclick="addClient(event)">Submit</button>
+                        <button class="primary_btnn btnn" onclick="addModules(event)">Submit</button>
                     </p>
                 </div>
             </div>
         </form>
-        <div id="import_patch" class="hide">
-            <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
-                <div>
-                    <div class="file-drop-area file_up_back">
-                        <span class="fake-btn">Choose files</span>
-                        <span class="file-msg">or drag and drop files here</span>
-                        <input class="file-input" type="file">
-                    </div>
-                    <br>
-                    <div id="textbox" class="">
-                        <p class="alignright">
-                            <button class="cancel_btnn btnn">Cancel</button>
-                            <button class="primary_btnn btnn">Submit</button>
-                        </p>
-                    </div>
+
+        <div style="clear: both;"></div>
+        <div>
+            <div class="row ">
+                <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
+                    <table class="table yajra-datatable">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Username</th>
+                                <th>Phone</th>
+                                <th>DOB</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -101,26 +99,10 @@
 @endsection
 @section('addscriptscontent')
 <script>
-    $(".c1").on('click', function(e) {
-        e.preventDefault();
-        $(".c1").fadeOut(function() {
-            $("#import_patch").fadeIn();
-            $("#form_patch").fadeOut();
-            $(".c2").fadeIn();
-        });
-    });
-
-    $(".c2").on('click', function(e) {
-        e.preventDefault();
-        $(".c2").fadeOut(function() {
-            $("#form_patch").fadeIn();
-            $("#import_patch").fadeOut();
-            $(".c1").fadeIn();
-        });
-    });
-
+var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+var path = {!! json_encode(url('/')) !!};
     $(document).ready(function() {
-        $('#client_form').parsley({
+        $('#module_form').parsley({
 
             errorClass: 'is-invalid text-danger',
             successClass: 'is-valid', // Comment this option if you don't want the field to become green when valid. Recommended in Google material design to prevent too many hints for user experience. Only report when a field is wrong.
@@ -158,7 +140,7 @@
         $(this).remove();
     });
     // ------------ Multiple File upload END ------------
-
+    showDatatable();
 
 
 
@@ -178,16 +160,6 @@
         }
     }
 
-    $(".toggle-password").click(function() {
-
-        $(this).toggleClass("icon-eye icon-eye-off");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") == "password") {
-            input.attr("type", "text");
-        } else {
-            input.attr("type", "password");
-        }
-    });
 
 
     ////////////      Single File Upload       ///////////////
@@ -221,32 +193,46 @@
     });
 
 
-    ///////////     image upload js with preview  //////////////////////
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
-                $('#imagePreview').hide();
-                $('#imagePreview').fadeIn(650);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
+    function showDatatable() {
+        $('#example3').DataTable().clear().destroy();
+         var table = $('.yajra-datatable').DataTable({
+            language: {
+                searchPlaceholder: '',
+                search: '<i class="feather icon-search">',
+                info: "Displaying _START_ to _END_ from _TOTAL_ ",
+                paginate: {
+                    next: '<i class="feather icon-chevron-right mid_icon">',
+                    previous: '<i class="feather icon-chevron-left mid_icon">'
+                }
+            },
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('students.list') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {data: 'username', name: 'username'},
+            {data: 'phone', name: 'phone'},
+            {data: 'dob', name: 'dob'},
+            {
+                data: 'action',
+                name: 'action',
+                orderable: true,
+                searchable: true
+            },
+        ]
+        });
     }
-    $("#imageUpload").change(function() {
-        readURL(this);
-    });
 
-    function addClient(event) {
-        var bg = $('#imagePreview').css('background-image');
-        bg = bg.replace('url(', '').replace(')', '').replace(/\"/gi, "");
+    function addModules(event) {
+        event.preventDefault();
         var isValid = true;
-        $('#client_form').each(function() {
+        $('#module_form').each(function() {
             if ($(this).parsley().validate() !== true) isValid = false;
         });
         if (isValid) {
-            event.preventDefault();
+            alert("Hiiii");
         }
     }
 </script>
