@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        #blur.blurr,
+        #sidebar.blurr,
+        #main.blurr {
+            filter: blur(5px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .popup_h22 {
+            display: contents;
+            font-weight: bolder;
+            float: left;
+        }
+
+        .popup-container {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.3);
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(21, 17, 17, 0.61);
+            display: flex;
+            align-items: center;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+        }
+
+        .popup-container.active {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .popup-content {
+            /* border-top: 5px solid #00a8cc !important; */
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            border-radius: 15px;
+        }
+
+        .popup-content p {
+            font-size: 17px;
+            padding: 10px;
+            line-height: 20px;
+        }
+
+        .popup_close_iocn {
+            right: -8px;
+            position: relative;
+            color: #3e3e3e;
+            float: right;
+            font-size: 40px;
+            font-weight: bolder;
+            top: -21px;
+        }
+
+        .popup-content span:hover,
+        .popup-content span:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .more-articles {
+            margin: 30px 30px 50px;
+            font-size: 20px;
+        }
+
+        .more-articles a {
+            margin: 0 10px;
+            text-decoration: underline;
+        }
+    </style>
+    <body>
+        <a
+            href="#"
+            onclick="popup_open()"
+            style="
+                color: white;
+                padding: 8px 12px;
+                background: #03aef6;
+                border-radius: 25px;
+                margin: 0px 10px;
+            "
+            >Approve</a
+        >
+        <div id="approve_popup-wrapper" class="popup-container">
+            <div class="popup-content" style="width: 40%">
+                <div
+                    class="flip-card-3D-wrapper"
+                    style="width: 100% !important; left: 0px"
+                >
+                    <div class="">
+                        <span id="approve_close" class="popup_close_iocn"
+                            >&times;</span
+                        >
+                        <h2>Leave Details</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var popup = document.getElementById("approve_popup-wrapper");
+        var close_popup = document.getElementById("approve_close");
+        var btnn = document.getElementById("view_data");
+        var sidebar = document.getElementById("sidebar");
+        var new_blur = document.getElementById("main");
+        close_popup.onclick = function () {
+            popup.classList.remove("show");
+            popup.classList.remove("active");
+            sidebar.classList.remove("blurr");
+            new_blur.classList.remove("blurr");
+        };
+
+        function popup_open(params) {
+            popup.classList.add("show");
+        sidebar.classList.add("blurr");
+        popup.classList.add("active");
+        new_blur.classList.add("blurr");
+        }
+    </script>
+</html>

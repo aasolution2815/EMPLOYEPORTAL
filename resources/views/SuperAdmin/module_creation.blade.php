@@ -18,7 +18,7 @@
             <div id="form_patch">
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
-                        <label for="name" class="input_label"></label>
+                        
                         <div>
                             <label for="name" class="input_label_light">Module Name</label>
                             <div class="inputWithIcon">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
-                        <label for="name" class="input_label"></label>
+                        
                         <div>
                             <label for="name" class="input_label_light">URL</label>
                             <div class="inputWithIcon">
@@ -38,6 +38,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
+                    
                         <div>
                             <label for="name" class="dropdown_label_light">Select Category</label>
                             <div>
@@ -48,19 +49,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12 padding_10">
-                        <label for="name" class="input_label"></label>
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
                         <div>
                             <label for="name" class="input_label_light">Description</label>
                             <div class="inputWithIcon">
-                                <textarea id="w3review" name="w3review" rows="4" cols="50" name="description" id="description">
-                                    </textarea>
-                                <i class="feather icon-user inside_input_icon"></i>
-
+                                <textarea id="w3review" name="w3review" rows="4" cols="50" name="description" id="description" class="textarea_p"></textarea>
+                                <!-- <i class="feather icon-user inside_input_icon"></i> -->
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div id="textbox" class="">
                     <p class="alignright">
@@ -109,7 +106,6 @@ var path = {!! json_encode(url('/')) !!};
             errorsWrapper: '<span class="form-error error_label"><i class="feather icon-x error_inputcolor"></i></span>',
             errorTemplate: '<span></span>',
             trigger: 'change'
-
         });
         $.ajaxSetup({
             headers: {

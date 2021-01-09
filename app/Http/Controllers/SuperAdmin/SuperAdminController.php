@@ -58,6 +58,12 @@ class SuperAdminController extends Controller
     {
         return view('SuperAdmin.inputs');
     }
+    public function warning()
+    {
+        return view('SuperAdmin.warning_patch');
+    }
+
+    
 
     public function module_creation()
     {

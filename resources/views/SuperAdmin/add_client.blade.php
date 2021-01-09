@@ -113,12 +113,12 @@
                         <div class="row">
                             <div class="col-md-8 col-sm-6 col-xs-12 margin_bottom_10">
                                 <div>
-                                    <label for="name" class="label_patch">Password</label>
+                                    <label for="name" class="label_patch">Password <a href="#" style="font-size: 11px;" data-toggle="tooltip" data-placement="top" title="Must Contain 6 Charcter Atlest 1 Uper Case ,Lower Case, Number, and Special Charter @,#,_,-"><i class="feather icon-info inside_input_icon" style="font-size: 15px;"></i></a></label>
                                     <div class="inputWithIcon">
                                         <input type="password" id="user_password" class="input_text margin_top_0 form-control" placeholder="Password" autocomplete="new-password" required="" data-parsley-trigger="blur" data-parsley-required-message="Required" data-parsley-pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[@#_-]).{6,}">
                                         <i class="feather icon-lock inside_input_icon"></i>
                                         <span toggle="#user_password" class="feather icon-eye field-icon toggle-password"></span>
-                                        <a href="#" style="font-size: 11px;" data-toggle="tooltip" data-placement="top" title="Must Contain 6 Charcter Atlest 1 Uper Case ,Lower Case, Number, and Special Charter @,#,_,-">Invalid</a>
+                                        
                                     </div>
                                 </div>
                             </div>

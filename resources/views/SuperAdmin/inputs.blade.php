@@ -124,22 +124,22 @@
                         <div class="inputWithIcon">
                             <div class="display_flex">
                                 <select class="form-control display_inline border_left_top_bottom" id="sel1">
-                                <?php
-                                for ($i=0; $i < 13; $i++) {
-                                    ?>
-                                    <option><?php echo $i?></option>
                                     <?php
-                                }
-                                ?>
+                                    for ($i = 0; $i < 13; $i++) {
+                                    ?>
+                                        <option><?php echo $i ?></option>
+                                    <?php
+                                    }
+                                    ?>
                                 </select>
                                 <select class="form-control display_inline" id="sel1">
-                                <?php
-                                for ($i=0; $i < 60; $i++) {
-                                    ?>
-                                    <option><?php echo $i?></option>
                                     <?php
-                                }
-                                ?>
+                                    for ($i = 0; $i < 60; $i++) {
+                                    ?>
+                                        <option><?php echo $i ?></option>
+                                    <?php
+                                    }
+                                    ?>
                                 </select>
                                 <select class="form-control display_inline border_right_top_bottom" id="sel1">
                                     <option>AM</option>
@@ -262,7 +262,7 @@
         <div>
             <div class="row ">
                 <div class="col-md-12 col-sm-12 col-xs-12 padding_10">
-                    
+
                     <button class="cancel_btnn btnn">Cancel</button>
                     <button class="primary_btnn btnn">Submit</button>
                     <button class="cancel_btnn btnn">Send Back</button>
@@ -278,6 +278,13 @@
                     <label class="badge_patch badge_red">Cancel</label>
                     <label class="badge_patch badge_orange">Pending</label>
                 </div>
+            </div>
+        </div>
+        <h1>Popup Design</h1>
+        <div>
+            <a href="#test-popup" class="open-popup-link">Show inline popup</a>
+            <div id="test-popup" class="white-popup mfp-hide">
+                <h1>Hello I'm Popup</h1>
             </div>
         </div>
         <h1>Table Structure</h1>
@@ -306,6 +313,14 @@
 </div>
 @endsection
 @section('addscriptscontent')
+<!-- popup script -->
+<script>
+    $('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+</script>
 <script>
     $(document).ready(function() {
         $("#table input").click(function() {
@@ -344,24 +359,41 @@
                     previous: '<i class="feather icon-chevron-left mid_icon">'
                 }
             },
-        processing: true,
-        serverSide: true,
-        ajax: "{{ route('students.list') }}",
-        columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'name', name: 'name'},
-            {data: 'email', name: 'email'},
-            {data: 'username', name: 'username'},
-            {data: 'phone', name: 'phone'},
-            {data: 'dob', name: 'dob'},
-            {
-                data: 'action',
-                name: 'action',
-                orderable: true,
-                searchable: true
-            },
-        ]
-    });
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('students.list') }}",
+            columns: [{
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex'
+                },
+                {
+                    data: 'name',
+                    name: 'name'
+                },
+                {
+                    data: 'email',
+                    name: 'email'
+                },
+                {
+                    data: 'username',
+                    name: 'username'
+                },
+                {
+                    data: 'phone',
+                    name: 'phone'
+                },
+                {
+                    data: 'dob',
+                    name: 'dob'
+                },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: true,
+                    searchable: true
+                },
+            ]
+        });
 
     });
 

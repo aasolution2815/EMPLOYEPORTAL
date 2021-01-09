@@ -4038,3 +4038,49 @@ a:active {
     font-size: 10px;
     padding: 5px 10px;
 }
+
+.textarea_p{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #d4d4d4;
+}
+.slect_err_p {
+    position: absolute;
+    margin: 0px 5px;
+    font-size: 11px;
+    top: 70px;
+    left: 0px;
+}
+.vertical_center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.bolder_900 {
+    font-weight: 900;
+}
+.back_btn {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 10pc;
+    background: #464353;
+    color: white;
+    font-size: 18px;
+}
+/* //////////    POP UP UI */
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width:auto;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  .mfp-close-btn-in .mfp-close {
+    color: #333;
+    font-weight: 400 !important;
+    font-size: 40px !important;
+}
