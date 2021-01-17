@@ -17,11 +17,15 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <!-- ////////    Parental Scripts part which user everywhere     //////// -->
 <script>
 $(document).ready(function() {
     $('.js-example-basic-single').select2();
     $('.js-example-basic-multiple').select2();
+});
+$(window).on('load', function () {
+    
+$("#cover").fadeOut(1750);
 });
 </script>

@@ -1,7 +1,11 @@
 @extends('Layout.app')
 @section('content')
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<style></style>
+<style>
+</style>
+<div id="cover"> 
+<lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_IxdD9J.json"  background="transparent"  speed="1" class="loader_pr"  loop  autoplay></lottie-player>
+</div>
 <div>
     <div class="h1_weight_700 shadow_patch">
         <div id="textbox" class="">
